@@ -1,0 +1,26 @@
+<ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h1>Convert the number to word:</h1>
+        <h2>{{ currentNumber }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8">
+        <ion-input type="text" [(ngModel)]="userInput" placeholder="Enter your answer"></ion-input>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="full" (click)="checkAnswer()">Check</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h2 [class]="resultColor + ' result-message'">{{ resultMessage }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button class="btn" expand="full" (click)="showNextNumber()">Next Number</ion-button>
+      </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,40 @@
+@-webkit-keyframes enlarge-animation {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes enlarge-animation {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container {
+    position: relative;
+    height: 100%; /* Set the container height to full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0.5); /* Start with 50% scale */
+    height: 100%;
+    animation: enlarge-animation 2s cubic-bezier(.25, .46, .45, .94) both;
+}
